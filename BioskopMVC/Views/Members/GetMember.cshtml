@@ -1,0 +1,29 @@
+﻿@model BioskopMVC.Models.Member
+@{
+    ViewBag.Title = Model.FirstName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Clan</h2>
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>JMBG</th>
+            <th>Adresa</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+             @if(Model!=null)
+            {
+                <tr>
+                    <td>@Model.FirstName @Model.LastName</td>
+                    <td>@Model.PersonalNumber</td>
+                    <td>@Model.Adress</td>
+                </tr>
+            }
+        
+    </tbody>
+</table>

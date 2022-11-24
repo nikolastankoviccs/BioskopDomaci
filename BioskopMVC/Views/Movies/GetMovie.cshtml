@@ -1,0 +1,29 @@
+﻿@model BioskopMVC.Models.Movie
+
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Film</h2>
+
+<table  class="table table-bordered table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Reditelj</th>
+            <th>Vreme Projekcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model!=null)
+            {
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Director</td>
+                    <td>@Model.ProjectionTime</td>
+                </tr>
+            }
+    </tbody>
+</table>

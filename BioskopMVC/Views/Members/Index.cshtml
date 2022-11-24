@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BioskopMVC.Models.Member>
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Clanovi</h2>
+
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Adresa</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach(var clan in Model)
+            {
+                <tr>
+                    <td>@clan.FirstName @clan.LastName</td>
+                    <td>@clan.Adress</td>
+                </tr>
+            }
+    </tbody>
+</table>
